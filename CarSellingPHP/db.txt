@@ -1,0 +1,6 @@
+h ivan # db -c carselling -u carselling
+Creating:
+Database: carselling
+User: carselling
+Pass: g3V8wob9ZqVW1q4ajKoD
+Done.
