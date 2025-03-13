@@ -47,8 +47,8 @@ session_start();
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="#top" class="text-gray-600 hover:text-green-600 px-3 py-2 text-sm font-medium">Home</a>
                     <a href="#aboutus" class="text-gray-600 hover:text-green-600 px-3 py-2 text-sm font-medium">About Us</a>
-                    <a href="#projects" class="text-gray-600 hover:text-green-600 px-3 py-2 text-sm font-medium">Products</a>
-                    <a href="#infos" class="text-gray-600 hover:text-green-600 px-3 py-2 text-sm font-medium">Contact</a>
+                    <a href="./browse-cars.php" class="text-gray-600 hover:text-green-600 px-3 py-2 text-sm font-medium">Products</a>
+                    <!-- <a href="#infos" class="text-gray-600 hover:text-green-600 px-3 py-2 text-sm font-medium">Contact</a> -->
                     <div class="flex items-center space-x-2">
                         <?php if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true): ?>
                             <a href="dashboard.php" class="text-green-600 hover:text-green-700 px-4 py-2 text-sm font-medium">
@@ -79,7 +79,7 @@ session_start();
                 <div class="px-2 pt-2 pb-3 space-y-1 border-t border-gray-200">
                     <a href="#top" class="block text-gray-600 hover:text-green-600 px-3 py-2 text-base font-medium">Home</a>
                     <a href="#aboutus" class="block text-gray-600 hover:text-green-600 px-3 py-2 text-base font-medium">About Us</a>
-                    <a href="#projects" class="block text-gray-600 hover:text-green-600 px-3 py-2 text-base font-medium">Products</a>
+                    <a href="./browse-cars.php" class="block text-gray-600 hover:text-green-600 px-3 py-2 text-base font-medium">Products</a>
                     <a href="#infos" class="block text-gray-600 hover:text-green-600 px-3 py-2 text-base font-medium">Contact</a>
                     <div class="pt-4 pb-3 border-t border-gray-200">
                         <?php if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true): ?>
@@ -113,8 +113,11 @@ session_start();
                             <h4>for <em>eco-friendly</em> vehicles</h4>
                             <p>Explore a curated selection of electric, hybrid, and alternative fuel cars designed for a sustainable future. Find the top-ranked vehicles.</p>
                             <div class="main-button scroll-to-section"><a href="#projects">Best Sellers</a></div>
-                            <span>or</span>
-                            <div class="second-button"><a href="auth/login.php">Log in/Sign up</a></div>
+                            <?php if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+                                echo "<span><strong>or</strong></span>"
+                                echo "<div class="second-button"><a href="auth/login.php">Log in/Sign up</a></div>"
+                            }
+                            ?>
                         </div>
                     </div>
                 </div>
