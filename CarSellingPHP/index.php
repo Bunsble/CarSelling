@@ -47,7 +47,7 @@ session_start();
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="#top" class="text-gray-600 hover:text-green-600 px-3 py-2 text-sm font-medium">Home</a>
                     <a href="#aboutus" class="text-gray-600 hover:text-green-600 px-3 py-2 text-sm font-medium">About Us</a>
-                    <a href="./browse-cars.php" class="text-gray-600 hover:text-green-600 px-3 py-2 text-sm font-medium">Browse Cars</a>
+                    <a href="browse-cars.php" class="text-gray-600 hover:text-green-600 px-3 py-2 text-sm font-medium">Browse Cars</a>
                     <!-- <a href="#infos" class="text-gray-600 hover:text-green-600 px-3 py-2 text-sm font-medium">Contact</a> -->
                     <div class="flex items-center space-x-2">
                         <?php if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true): ?>
@@ -79,7 +79,7 @@ session_start();
                 <div class="px-2 pt-2 pb-3 space-y-1 border-t border-gray-200">
                     <a href="#top" class="block text-gray-600 hover:text-green-600 px-3 py-2 text-base font-medium">Home</a>
                     <a href="#aboutus" class="block text-gray-600 hover:text-green-600 px-3 py-2 text-base font-medium">About Us</a>
-                    <a href="./browse-cars.php" class="block text-gray-600 hover:text-green-600 px-3 py-2 text-base font-medium">Browse Cars</a>
+                    <a href="browse-cars.php" class="block text-gray-600 hover:text-green-600 px-3 py-2 text-base font-medium">Browse Cars</a>
                     <a href="#infos" class="block text-gray-600 hover:text-green-600 px-3 py-2 text-base font-medium">Contact</a>
                     <div class="pt-4 pb-3 border-t border-gray-200">
                         <?php if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true): ?>
